@@ -11,6 +11,8 @@ public static class MauiProgram
 		var builder = MauiApp.CreateBuilder();
         builder.Services.AddSingleton<MonkeyService>();
         builder.Services.AddSingleton<MonkeysViewModel>();
+        builder.Services.AddTransient<MonkeyDetailsViewModel>();
+        builder.Services.AddTransient<DetailsPage>();
         builder
 			.UseMauiApp<App>()
 			.ConfigureFonts(fonts =>
