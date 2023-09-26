@@ -24,18 +24,14 @@
             <DataTemplate x:DataType="model:Monkey">
                 <HorizontalStackLayout Padding="10">
                     <Image
-                    Aspect="AspectFill"
-                    HeightRequest="100"
-                    Source="{Binding Image}"
-                    WidthRequest="100" />
-                    <Label VerticalOptions="Center" TextColor="Gray">
-                        <Label.Text>
-                            <MultiBinding StringFormat="{}{0} | {1}">
-                                <Binding Path="Name" />
-                                <Binding Path="Location" />
-                            </MultiBinding>
-                        </Label.Text>
-                    </Label>
+        Aspect="AspectFill"
+        HeightRequest="100"
+        Source="{Binding Image}"
+        WidthRequest="100" />
+                    <VerticalStackLayout VerticalOptions="Center">
+                        <Label Text="{Binding Name}" FontSize="24" TextColor="IndianRed"/>
+                        <Label Text="{Binding Location}" FontSize="18" TextColor="Black"/>
+                    </VerticalStackLayout>
                 </HorizontalStackLayout>
             </DataTemplate>
         </CollectionView.ItemTemplate>
