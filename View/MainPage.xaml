@@ -48,16 +48,9 @@
                 </DataTemplate>
 
             </CollectionView.ItemTemplate>
-                    <CollectionView.EmptyView>
-                        <StackLayout Padding="100">
-                            <Image
-                HorizontalOptions="Center"
-                Source="nodata.png"
-                HeightRequest="160"
-                WidthRequest="160"
-                VerticalOptions="Center" />
-                        </StackLayout>
-                    </CollectionView.EmptyView>
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Vertical" />
+                    </CollectionView.ItemsLayout>
 
                 </CollectionView>
             </ContentView>
@@ -70,7 +63,7 @@
                 Grid.Column="0"
                 Style="{StaticResource ButtonOutline}"
                 Margin="8"
-                TextColor="Red"/>
+                TextColor="red"/>
 
         <Button Text="Find Closest Monkey" 
                 Command="{Binding GetClosestMonkeyCommand}"
@@ -79,7 +72,7 @@
                 Grid.Column="1"
                 Style="{StaticResource ButtonOutline}"
                 Margin="8"
-                TextColor="Red"/>
+                TextColor="red"/>
 
 
         <ActivityIndicator IsVisible="{Binding IsBusy}"
