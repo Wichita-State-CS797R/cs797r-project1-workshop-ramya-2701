@@ -32,7 +32,7 @@
 
             <Label Style="{StaticResource LargeLabel}" 
                    Grid.Row="1"
-                   TextColor="black"
+                   TextColor="Black"
                    FontAttributes="Bold"
                    Text="{Binding Monkey.Name}" 
                    HorizontalOptions="Center"
