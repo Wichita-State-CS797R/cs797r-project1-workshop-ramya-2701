@@ -48,10 +48,16 @@
                 </DataTemplate>
 
             </CollectionView.ItemTemplate>
-                    <CollectionView.ItemsLayout>
-                        <GridItemsLayout Orientation="Horizontal" Span="3" />
-
-                    </CollectionView.ItemsLayout>
+                    <CollectionView.EmptyView>
+                        <StackLayout Padding="100">
+                            <Image
+                HorizontalOptions="Center"
+                Source="nodata.png"
+                HeightRequest="160"
+                WidthRequest="160"
+                VerticalOptions="Center" />
+                        </StackLayout>
+                    </CollectionView.EmptyView>
 
                 </CollectionView>
             </ContentView>
