@@ -22,7 +22,10 @@
                 <CollectionView
             ItemsSource="{Binding Monkeys}"
             SelectionMode="None">
-                        <CollectionView.ItemTemplate>
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Horizontal" Span="3" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="model:Monkey">
                     <Grid Padding="10">
                         <Frame HeightRequest="125" Style="{StaticResource CardView}">
@@ -48,10 +51,7 @@
                 </DataTemplate>
 
             </CollectionView.ItemTemplate>
-                    <CollectionView.ItemsLayout>
-                        <LinearItemsLayout Orientation="Vertical" />
-                    </CollectionView.ItemsLayout>
-
+                   
                 </CollectionView>
             </ContentView>
         </RefreshView>
