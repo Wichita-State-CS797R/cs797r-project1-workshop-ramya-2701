@@ -14,11 +14,15 @@
         ColumnSpacing="5"
         RowDefinitions="*,Auto"
         RowSpacing="0">
-        <CollectionView
-            Grid.ColumnSpan="2"
+        <RefreshView
+    Grid.ColumnSpan="2"
+    Command="{Binding GetMonkeysCommand}"
+    IsRefreshing="{Binding IsRefreshing}">
+            <ContentView>
+                <CollectionView
             ItemsSource="{Binding Monkeys}"
             SelectionMode="None">
-            <CollectionView.ItemTemplate>
+                    <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="model:Monkey">
                     <Grid Padding="10">
                         <Frame HeightRequest="125" Style="{StaticResource CardView}">
@@ -43,7 +47,9 @@
                     </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
-        </CollectionView>
+                </CollectionView>
+            </ContentView>
+        </RefreshView>
 
         <Button Text="Monkeys List" 
                 Command="{Binding GetMonkeysCommand}"

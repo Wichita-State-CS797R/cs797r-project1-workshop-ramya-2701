@@ -36,7 +36,8 @@
                    FontAttributes="Bold"
                    Text="{Binding Monkey.Name}" 
                    HorizontalOptions="Center"
-                   Margin="0,0,0,8"/>
+                   Margin="0,0,0,8"
+              />
 
             <VerticalStackLayout Grid.Row="2" Padding="10" Spacing="10">
                 <!-- Add this -->
