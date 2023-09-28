@@ -204,6 +204,25 @@ Empty View:
 ![Screenshot 2023-09-26 232743](https://github.com/Wichita-State-CS797R/cs797r-project1-workshop-ramya-2701/assets/95271051/8bd2a634-449d-410d-b9fa-71a2760d3c44)
 
 
+We have added code to respond for the dark theme , changes textcolor. Added the proeprty to change text color dark for the light background and light for the dark background.AppThemeBinding is used to change the app accounding to the phone theme.To update the background colors add the following code:
+
+<Style ApplyToDerivedTypes="True" TargetType="Page">
+    <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}" />
+</Style>
+
+To update base labels color:
+
+<Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource LabelText}, Dark={StaticResource LabelTextDark}}" />
+
+
+To add background to the refresh page:
+
+<Style ApplyToDerivedTypes="True" TargetType="RefreshView">
+    <Setter Property="RefreshColor" Value="{StaticResource Primary}" />
+    <!--Add this-->
+    <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}" />
+</Style>
+
 
 
 
